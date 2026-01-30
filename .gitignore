@@ -1,0 +1,10 @@
+# 覆盖所有 .env 相关文件（包括空格、后缀）
+.env
+.env*
+*.env*
+
+# 其他通用规则
+__pycache__/
+*.pyc
+venv/
+*.log

@@ -1,0 +1,58 @@
+{
+  "final_allocation": {
+    "decision_time": "2024-01-23 10:30:00",
+    "total_tasks": 5,
+    "total_uavs": 4,
+    "assignments": [
+      {
+        "task_id": "T4",
+        "task_name": "紧急侦察",
+        "assigned_uav": "UAV-001",
+        "start_time": "08:00",
+        "estimated_duration": "40分钟（含往返）",
+        "priority": "紧急",
+        "rationale": "UAV-001速度最快、电量满格、位于A基地，能确保在08:30紧急窗口前完成侦察任务"
+      },
+      {
+        "task_id": "T2",
+        "task_name": "物资运输",
+        "assigned_uav": "UAV-002",
+        "start_time": "08:20",
+        "estimated_duration": "50分钟（含往返）",
+        "priority": "高",
+        "rationale": "唯一能运输3kg物资的无人机，规划在09:00禁飞期前完成投送，严格避开禁飞区"
+      },
+      {
+        "task_id": "T1",
+        "task_name": "区域侦察",
+        "assigned_uav": "UAV-004",
+        "start_time": "08:40",
+        "estimated_duration": "60分钟（含往返）",
+        "priority": "高",
+        "rationale": "UAV-004多用途能力匹配侦察任务，续航充足，在UAV-001返航后立即执行，确保时间窗口"
+      },
+      {
+        "task_id": "T3",
+        "task_name": "目标监控",
+        "assigned_uav": "UAV-003",
+        "start_time": "08:30",
+        "estimated_duration": "90分钟（含往返）",
+        "priority": "中",
+        "rationale": "UAV-003续航100分钟，执行60分钟监控任务比UAV-004更可靠，预留充足往返时间"
+      },
+      {
+        "task_id": "T5",
+        "task_name": "设备投送",
+        "assigned_uav": "UAV-001",
+        "start_time": "10:30",
+        "estimated_duration": "45分钟（含往返）",
+        "priority": "低",
+        "rationale": "UAV-001完成T4后电量充足，速度快，投送1kg设备在能力范围内，避免UAV-002连续作业的电量风险"
+      }
+    ],
+    "unassigned_tasks": [],
+    "total_completion_time": "11:15",
+    "risk_assessment": "低风险。所有任务在时间窗口内完成，关键约束（禁飞区）已规避，无人机能力与任务匹配良好，电量分配合理。唯一注意点是UAV-003从B基地出发需确保到E点距离在合理范围内。",
+    "notes": "1. UAV-002必须严格在09:00前完成D点投送并离开禁飞区。2. UAV-001执行轻型投送任务需确认其具体载重能力。3. 执行前需进行详细空域航线规划，避免起飞和返航阶段的潜在冲突。"
+  }
+}

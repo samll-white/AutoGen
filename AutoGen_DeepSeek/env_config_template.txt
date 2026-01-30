@@ -1,0 +1,42 @@
+# AutoGen 多智能体系统 - 环境变量配置模板
+# 复制此文件内容到 .env 文件并填入你的实际配置
+
+# ============================================
+# LLM API 配置
+# ============================================
+
+# 方案1: OpenAI (需要科学上网)
+# LLM_MODEL_ID=gpt-4o
+# LLM_API_KEY=sk-your-openai-api-key-here
+# LLM_BASE_URL=https://api.openai.com/v1
+
+# 方案2: 智谱AI (推荐，国内可用)
+# LLM_MODEL_ID=glm-4
+# LLM_API_KEY=your-zhipu-api-key-here
+# LLM_BASE_URL=https://open.bigmodel.cn/api/paas/v4
+
+# 方案3: 阿里通义千问
+# LLM_MODEL_ID=qwen-max
+# LLM_API_KEY=your-aliyun-api-key-here
+# LLM_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
+
+# 方案4: DeepSeek (性价比高)
+# LLM_MODEL_ID=deepseek-chat
+# LLM_API_KEY=your-deepseek-api-key-here
+# LLM_BASE_URL=https://api.deepseek.com/v1
+
+# ============================================
+# 其他配置（可选）
+# ============================================
+
+# API 超时时间（秒）
+# LLM_TIMEOUT=60
+
+# ============================================
+# 使用说明
+# ============================================
+# 1. 创建一个新文件命名为 .env
+# 2. 选择一个方案，复制对应的配置（去掉 # 注释符）
+# 3. 填入你的实际 API Key
+# 4. 保存 .env 文件
+# 5. 运行程序: python autogen_uav_allocation.py
