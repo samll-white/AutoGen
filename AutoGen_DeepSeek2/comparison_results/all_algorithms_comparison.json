@@ -1,0 +1,386 @@
+{
+  "experiment_time": "2026-01-31 00:04:28",
+  "algorithms": [
+    "autogen",
+    "greedy",
+    "random",
+    "genetic",
+    "ip"
+  ],
+  "algorithm_names": {
+    "autogen": "AutoGen",
+    "greedy": "贪心算法",
+    "random": "随机分配",
+    "genetic": "遗传算法",
+    "ip": "整数规划"
+  },
+  "results": {
+    "autogen": {
+      "algorithm_name": "AutoGen",
+      "overall_score": 94.84,
+      "task_completion_rate": 100.0,
+      "time_efficiency": 100.0,
+      "resource_utilization": 89.2,
+      "constraint_satisfaction": 80.0,
+      "runtime": 0,
+      "completed_tasks": 5,
+      "total_tasks": 5,
+      "detailed_metrics": {
+        "task_completion": {
+          "total_tasks": 5,
+          "completed_tasks": 5,
+          "unassigned_tasks": 0,
+          "completion_rate": 100.0,
+          "high_priority_completion_rate": 100.0,
+          "priority_breakdown": {
+            "紧急": {
+              "total": 1,
+              "completed": 1
+            },
+            "高": {
+              "total": 2,
+              "completed": 2
+            },
+            "中": {
+              "total": 1,
+              "completed": 1
+            },
+            "低": {
+              "total": 1,
+              "completed": 1
+            }
+          },
+          "score": 1.0
+        },
+        "time_efficiency": {
+          "total_completion_time_min": 0.0,
+          "average_wait_time_min": 57.0,
+          "urgent_response_time_min": 0.0,
+          "time_window_utilization": 0.85,
+          "score": 1.0
+        },
+        "resource_utilization": {
+          "total_uavs": 4,
+          "used_uavs": 4,
+          "utilization_rate": 100.0,
+          "uav_task_distribution": {
+            "UAV-004": 1,
+            "UAV-002": 2,
+            "UAV-003": 1,
+            "UAV-001": 1
+          },
+          "load_balance_std": 0.43,
+          "load_balance_score": 0.783,
+          "estimated_total_distance_km": 150,
+          "score": 0.892
+        },
+        "constraint_satisfaction": {
+          "time_conflicts": [
+            "UAV-002可能存在任务间隔紧张"
+          ],
+          "conflict_count": 1,
+          "constraint_violations": 0,
+          "safety_score": 1.0,
+          "risk_level": "低",
+          "score": 0.8
+        },
+        "overall_score": 94.84
+      }
+    },
+    "greedy": {
+      "algorithm_name": "贪心算法",
+      "overall_score": 63.8,
+      "task_completion_rate": 80.0,
+      "time_efficiency": 31.2,
+      "resource_utilization": 75.0,
+      "constraint_satisfaction": 60.0,
+      "runtime": 0.004000186920166016,
+      "completed_tasks": 4,
+      "total_tasks": 5,
+      "detailed_metrics": {
+        "task_completion": {
+          "total_tasks": 5,
+          "completed_tasks": 4,
+          "unassigned_tasks": 1,
+          "completion_rate": 80.0,
+          "high_priority_completion_rate": 66.67,
+          "priority_breakdown": {
+            "紧急": {
+              "total": 1,
+              "completed": 0
+            },
+            "高": {
+              "total": 2,
+              "completed": 2
+            },
+            "中": {
+              "total": 1,
+              "completed": 1
+            },
+            "低": {
+              "total": 1,
+              "completed": 1
+            }
+          },
+          "score": 0.8
+        },
+        "time_efficiency": {
+          "total_completion_time_min": 165.0,
+          "average_wait_time_min": 52.5,
+          "urgent_response_time_min": 0,
+          "time_window_utilization": 0.85,
+          "score": 0.312
+        },
+        "resource_utilization": {
+          "total_uavs": 4,
+          "used_uavs": 2,
+          "utilization_rate": 50.0,
+          "uav_task_distribution": {
+            "UAV-002": 2,
+            "UAV-001": 2
+          },
+          "load_balance_std": 0.0,
+          "load_balance_score": 1.0,
+          "estimated_total_distance_km": 120,
+          "score": 0.75
+        },
+        "constraint_satisfaction": {
+          "time_conflicts": [
+            "UAV-002可能存在任务间隔紧张",
+            "UAV-001可能存在任务间隔紧张"
+          ],
+          "conflict_count": 2,
+          "constraint_violations": 0,
+          "safety_score": 0.8,
+          "risk_level": "未知",
+          "score": 0.6
+        },
+        "overall_score": 63.8
+      }
+    },
+    "random": {
+      "algorithm_name": "随机分配",
+      "overall_score": 62.63,
+      "task_completion_rate": 100.0,
+      "time_efficiency": 12.5,
+      "resource_utilization": 37.5,
+      "constraint_satisfaction": 80.0,
+      "runtime": 0.0,
+      "completed_tasks": 5,
+      "total_tasks": 5,
+      "detailed_metrics": {
+        "task_completion": {
+          "total_tasks": 5,
+          "completed_tasks": 5,
+          "unassigned_tasks": 0,
+          "completion_rate": 100.0,
+          "high_priority_completion_rate": 100.0,
+          "priority_breakdown": {
+            "紧急": {
+              "total": 1,
+              "completed": 1
+            },
+            "高": {
+              "total": 2,
+              "completed": 2
+            },
+            "中": {
+              "total": 1,
+              "completed": 1
+            },
+            "低": {
+              "total": 1,
+              "completed": 1
+            }
+          },
+          "score": 1.0
+        },
+        "time_efficiency": {
+          "total_completion_time_min": 210.0,
+          "average_wait_time_min": 58.0,
+          "urgent_response_time_min": 0.0,
+          "time_window_utilization": 0.85,
+          "score": 0.125
+        },
+        "resource_utilization": {
+          "total_uavs": 4,
+          "used_uavs": 2,
+          "utilization_rate": 50.0,
+          "uav_task_distribution": {
+            "UAV-002": 4,
+            "UAV-001": 1
+          },
+          "load_balance_std": 1.5,
+          "load_balance_score": 0.25,
+          "estimated_total_distance_km": 150,
+          "score": 0.375
+        },
+        "constraint_satisfaction": {
+          "time_conflicts": [
+            "UAV-002可能存在任务间隔紧张"
+          ],
+          "conflict_count": 1,
+          "constraint_violations": 0,
+          "safety_score": 0.8,
+          "risk_level": "未知",
+          "score": 0.8
+        },
+        "overall_score": 62.63
+      }
+    },
+    "genetic": {
+      "algorithm_name": "遗传算法",
+      "overall_score": 63.8,
+      "task_completion_rate": 80.0,
+      "time_efficiency": 31.2,
+      "resource_utilization": 75.0,
+      "constraint_satisfaction": 60.0,
+      "runtime": 0.0010001659393310547,
+      "completed_tasks": 4,
+      "total_tasks": 5,
+      "detailed_metrics": {
+        "task_completion": {
+          "total_tasks": 5,
+          "completed_tasks": 4,
+          "unassigned_tasks": 1,
+          "completion_rate": 80.0,
+          "high_priority_completion_rate": 66.67,
+          "priority_breakdown": {
+            "紧急": {
+              "total": 1,
+              "completed": 0
+            },
+            "高": {
+              "total": 2,
+              "completed": 2
+            },
+            "中": {
+              "total": 1,
+              "completed": 1
+            },
+            "低": {
+              "total": 1,
+              "completed": 1
+            }
+          },
+          "score": 0.8
+        },
+        "time_efficiency": {
+          "total_completion_time_min": 165.0,
+          "average_wait_time_min": 52.5,
+          "urgent_response_time_min": 0,
+          "time_window_utilization": 0.85,
+          "score": 0.312
+        },
+        "resource_utilization": {
+          "total_uavs": 4,
+          "used_uavs": 2,
+          "utilization_rate": 50.0,
+          "uav_task_distribution": {
+            "UAV-002": 2,
+            "UAV-001": 2
+          },
+          "load_balance_std": 0.0,
+          "load_balance_score": 1.0,
+          "estimated_total_distance_km": 120,
+          "score": 0.75
+        },
+        "constraint_satisfaction": {
+          "time_conflicts": [
+            "UAV-002可能存在任务间隔紧张",
+            "UAV-001可能存在任务间隔紧张"
+          ],
+          "conflict_count": 2,
+          "constraint_violations": 0,
+          "safety_score": 0.8,
+          "risk_level": "未知",
+          "score": 0.6
+        },
+        "overall_score": 63.8
+      }
+    },
+    "ip": {
+      "algorithm_name": "整数规划",
+      "overall_score": 63.8,
+      "task_completion_rate": 80.0,
+      "time_efficiency": 31.2,
+      "resource_utilization": 75.0,
+      "constraint_satisfaction": 60.0,
+      "runtime": 0.0,
+      "completed_tasks": 4,
+      "total_tasks": 5,
+      "detailed_metrics": {
+        "task_completion": {
+          "total_tasks": 5,
+          "completed_tasks": 4,
+          "unassigned_tasks": 1,
+          "completion_rate": 80.0,
+          "high_priority_completion_rate": 66.67,
+          "priority_breakdown": {
+            "紧急": {
+              "total": 1,
+              "completed": 0
+            },
+            "高": {
+              "total": 2,
+              "completed": 2
+            },
+            "中": {
+              "total": 1,
+              "completed": 1
+            },
+            "低": {
+              "total": 1,
+              "completed": 1
+            }
+          },
+          "score": 0.8
+        },
+        "time_efficiency": {
+          "total_completion_time_min": 165.0,
+          "average_wait_time_min": 52.5,
+          "urgent_response_time_min": 0,
+          "time_window_utilization": 0.85,
+          "score": 0.312
+        },
+        "resource_utilization": {
+          "total_uavs": 4,
+          "used_uavs": 2,
+          "utilization_rate": 50.0,
+          "uav_task_distribution": {
+            "UAV-002": 2,
+            "UAV-001": 2
+          },
+          "load_balance_std": 0.0,
+          "load_balance_score": 1.0,
+          "estimated_total_distance_km": 120,
+          "score": 0.75
+        },
+        "constraint_satisfaction": {
+          "time_conflicts": [
+            "UAV-002可能存在任务间隔紧张",
+            "UAV-001可能存在任务间隔紧张"
+          ],
+          "conflict_count": 2,
+          "constraint_violations": 0,
+          "safety_score": 0.8,
+          "risk_level": "未知",
+          "score": 0.6
+        },
+        "overall_score": 63.8
+      }
+    }
+  },
+  "summary": {
+    "max_score": 94.84,
+    "min_score": 62.63,
+    "avg_score": 69.774,
+    "std_score": 12.54118909832716,
+    "score_range": 32.21,
+    "best_algorithm": {
+      "name": "AutoGen",
+      "code": "autogen",
+      "score": 94.84
+    }
+  }
+}

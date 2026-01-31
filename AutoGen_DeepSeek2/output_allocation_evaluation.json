@@ -1,0 +1,61 @@
+{
+  "task_completion": {
+    "total_tasks": 5,
+    "completed_tasks": 5,
+    "unassigned_tasks": 0,
+    "completion_rate": 100.0,
+    "high_priority_completion_rate": 100.0,
+    "priority_breakdown": {
+      "紧急": {
+        "total": 1,
+        "completed": 1
+      },
+      "高": {
+        "total": 2,
+        "completed": 2
+      },
+      "中": {
+        "total": 1,
+        "completed": 1
+      },
+      "低": {
+        "total": 1,
+        "completed": 1
+      }
+    },
+    "score": 1.0
+  },
+  "time_efficiency": {
+    "total_completion_time_min": 0.0,
+    "average_wait_time_min": 57.0,
+    "urgent_response_time_min": 0.0,
+    "time_window_utilization": 0.85,
+    "score": 1.0
+  },
+  "resource_utilization": {
+    "total_uavs": 4,
+    "used_uavs": 4,
+    "utilization_rate": 100.0,
+    "uav_task_distribution": {
+      "UAV-004": 1,
+      "UAV-002": 2,
+      "UAV-003": 1,
+      "UAV-001": 1
+    },
+    "load_balance_std": 0.43,
+    "load_balance_score": 0.783,
+    "estimated_total_distance_km": 150,
+    "score": 0.892
+  },
+  "constraint_satisfaction": {
+    "time_conflicts": [
+      "UAV-002可能存在任务间隔紧张"
+    ],
+    "conflict_count": 1,
+    "constraint_violations": 0,
+    "safety_score": 1.0,
+    "risk_level": "低",
+    "score": 0.8
+  },
+  "overall_score": 94.84
+}
