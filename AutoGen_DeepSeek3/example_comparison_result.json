@@ -1,0 +1,92 @@
+{
+  "experiment_time": "2024-01-23 10:30:00",
+  "algorithms": ["autogen", "greedy"],
+  "autogen": {
+    "overall_score": 87.5,
+    "task_completion_rate": 100.0,
+    "time_efficiency": 81.3,
+    "resource_utilization": 80.0,
+    "constraint_satisfaction": 100.0,
+    "runtime": 180.5,
+    "completed_tasks": 5,
+    "total_tasks": 5,
+    "details": {
+      "任务完成度": {
+        "score": 100.0,
+        "优势": "所有任务都被合理分配，包括紧急任务优先处理"
+      },
+      "时间效率": {
+        "score": 81.3,
+        "优势": "考虑了时间窗口优化，紧急任务响应迅速"
+      },
+      "资源利用": {
+        "score": 80.0,
+        "优势": "负载均衡，避免单一无人机过载"
+      },
+      "约束满足": {
+        "score": 100.0,
+        "优势": "自动检测并避免禁飞区冲突"
+      }
+    }
+  },
+  "greedy": {
+    "overall_score": 82.3,
+    "task_completion_rate": 100.0,
+    "time_efficiency": 75.0,
+    "resource_utilization": 70.5,
+    "constraint_satisfaction": 100.0,
+    "runtime": 0.001,
+    "completed_tasks": 5,
+    "total_tasks": 5,
+    "details": {
+      "任务完成度": {
+        "score": 100.0,
+        "说明": "按优先级顺序分配，完成所有任务"
+      },
+      "时间效率": {
+        "score": 75.0,
+        "劣势": "未考虑全局时间优化，可能有等待时间"
+      },
+      "资源利用": {
+        "score": 70.5,
+        "劣势": "负载不够均衡，某些无人机利用不足"
+      },
+      "约束满足": {
+        "score": 100.0,
+        "说明": "简单场景下也能满足基本约束"
+      }
+    }
+  },
+  "comparison": {
+    "score_difference": 5.2,
+    "winner": "autogen",
+    "autogen_advantages": [
+      "更好的全局优化",
+      "更均衡的负载分配",
+      "更短的平均等待时间",
+      "自动冲突检测和解决",
+      "更高的可解释性"
+    ],
+    "greedy_advantages": [
+      "运行速度快（0.001秒 vs 180秒）",
+      "实现简单",
+      "确定性输出",
+      "无需API调用"
+    ],
+    "conclusion": "AutoGen在方案质量上领先5.2分，但运行时间较长。适合对方案质量要求高、时间不敏感的场景。"
+  },
+  "recommendations": {
+    "use_autogen_when": [
+      "需要高质量的分配方案",
+      "任务场景复杂（多约束、多冲突）",
+      "需要方案解释和理由",
+      "可以接受分钟级的运行时间"
+    ],
+    "use_greedy_when": [
+      "需要实时响应（毫秒级）",
+      "场景简单，约束少",
+      "对方案质量要求不高",
+      "需要确定性结果"
+    ]
+  }
+}

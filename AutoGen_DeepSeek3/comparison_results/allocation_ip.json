@@ -1,0 +1,52 @@
+{
+  "final_allocation": {
+    "decision_time": "2026-01-31 00:04:28",
+    "total_tasks": 5,
+    "total_uavs": 4,
+    "assignments": [
+      {
+        "task_id": "T2",
+        "task_name": "物资运输",
+        "assigned_uav": "UAV-002",
+        "start_time": "08:30",
+        "estimated_duration": "55分钟（含往返）",
+        "priority": "高",
+        "rationale": "贪心算法分配：UAV-002在08:30可用"
+      },
+      {
+        "task_id": "T1",
+        "task_name": "区域侦察",
+        "assigned_uav": "UAV-001",
+        "start_time": "08:00",
+        "estimated_duration": "45分钟（含往返）",
+        "priority": "高",
+        "rationale": "贪心算法分配：UAV-001在08:00可用"
+      },
+      {
+        "task_id": "T3",
+        "task_name": "目标监控",
+        "assigned_uav": "UAV-001",
+        "start_time": "09:00",
+        "estimated_duration": "75分钟（含往返）",
+        "priority": "中",
+        "rationale": "贪心算法分配：UAV-001在09:00可用"
+      },
+      {
+        "task_id": "T5",
+        "task_name": "设备投送",
+        "assigned_uav": "UAV-002",
+        "start_time": "10:00",
+        "estimated_duration": "45分钟（含往返）",
+        "priority": "低",
+        "rationale": "贪心算法分配：UAV-002在10:00可用"
+      }
+    ],
+    "unassigned_tasks": [
+      "T4"
+    ],
+    "total_completion_time": "10:45",
+    "risk_assessment": "数学优化保证的方案",
+    "notes": "整数规划求解（理论最优）",
+    "algorithm": "IntegerProgramming"
+  }
+}

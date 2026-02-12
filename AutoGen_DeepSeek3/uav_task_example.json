@@ -1,0 +1,171 @@
+{
+  "scenario": "多无人机任务分配示例",
+  "timestamp": "2024-01-23T08:00:00",
+  
+  "available_uavs": [
+    {
+      "uav_id": "UAV-001",
+      "type": "侦察型",
+      "capabilities": {
+        "max_flight_time": 120,
+        "max_speed_kmh": 80,
+        "max_payload_kg": 0,
+        "sensors": ["高清摄像头", "红外传感器"]
+      },
+      "current_status": {
+        "location": "A基地",
+        "battery_percent": 100,
+        "availability": "可用"
+      }
+    },
+    {
+      "uav_id": "UAV-002",
+      "type": "运输型",
+      "capabilities": {
+        "max_flight_time": 90,
+        "max_speed_kmh": 60,
+        "max_payload_kg": 5,
+        "sensors": ["GPS导航"]
+      },
+      "current_status": {
+        "location": "A基地",
+        "battery_percent": 85,
+        "availability": "可用"
+      }
+    },
+    {
+      "uav_id": "UAV-003",
+      "type": "侦察型",
+      "capabilities": {
+        "max_flight_time": 100,
+        "max_speed_kmh": 70,
+        "max_payload_kg": 0,
+        "sensors": ["高清摄像头", "热成像仪"]
+      },
+      "current_status": {
+        "location": "B基地",
+        "battery_percent": 90,
+        "availability": "可用"
+      }
+    },
+    {
+      "uav_id": "UAV-004",
+      "type": "多用途",
+      "capabilities": {
+        "max_flight_time": 80,
+        "max_speed_kmh": 65,
+        "max_payload_kg": 2,
+        "sensors": ["摄像头", "GPS导航"]
+      },
+      "current_status": {
+        "location": "A基地",
+        "battery_percent": 95,
+        "availability": "可用"
+      }
+    }
+  ],
+  
+  "tasks": [
+    {
+      "task_id": "T1",
+      "task_name": "区域侦察",
+      "task_type": "侦察",
+      "description": "对C区域进行侦察",
+      "location": "C区域",
+      "estimated_duration_min": 30,
+      "priority": "高",
+      "time_window": {
+        "start": "08:00",
+        "end": "10:00"
+      },
+      "required_capabilities": ["摄像头"]
+    },
+    {
+      "task_id": "T2",
+      "task_name": "物资运输",
+      "task_type": "运输",
+      "description": "从A基地运输医疗物资到D点",
+      "from_location": "A基地",
+      "to_location": "D点",
+      "payload_kg": 3,
+      "estimated_duration_min": 40,
+      "priority": "高",
+      "time_window": {
+        "start": "08:30",
+        "end": "09:30"
+      },
+      "required_capabilities": ["载重>=3kg"]
+    },
+    {
+      "task_id": "T3",
+      "task_name": "目标监控",
+      "task_type": "监控",
+      "description": "对E点目标持续监控",
+      "location": "E点",
+      "estimated_duration_min": 60,
+      "priority": "中",
+      "time_window": {
+        "start": "09:00",
+        "end": "12:00"
+      },
+      "required_capabilities": ["摄像头", "长续航"]
+    },
+    {
+      "task_id": "T4",
+      "task_name": "紧急侦察",
+      "task_type": "侦察",
+      "description": "对F区域紧急侦察",
+      "location": "F区域",
+      "estimated_duration_min": 20,
+      "priority": "紧急",
+      "time_window": {
+        "start": "08:00",
+        "end": "08:30"
+      },
+      "required_capabilities": ["摄像头", "高速"]
+    },
+    {
+      "task_id": "T5",
+      "task_name": "设备投送",
+      "task_type": "运输",
+      "description": "向G点投送通信设备",
+      "from_location": "A基地",
+      "to_location": "G点",
+      "payload_kg": 1,
+      "estimated_duration_min": 30,
+      "priority": "低",
+      "time_window": {
+        "start": "10:00",
+        "end": "12:00"
+      },
+      "required_capabilities": ["载重>=1kg"]
+    }
+  ],
+  
+  "constraints": [
+    {
+      "type": "禁飞区",
+      "description": "D区域为临时禁飞区",
+      "location": "D区域",
+      "time_window": {
+        "start": "09:00",
+        "end": "09:30"
+      }
+    },
+    {
+      "type": "并发限制",
+      "description": "每架无人机同一时间只能执行一个任务"
+    },
+    {
+      "type": "返航要求",
+      "description": "任务完成后无人机需返回最近基地"
+    }
+  ],
+  
+  "additional_info": {
+    "base_locations": ["A基地", "B基地"],
+    "average_flight_time_to_task_min": 12,
+    "weather_condition": "晴朗，风速5m/s",
+    "communication_range_km": 10
+  }
+}
